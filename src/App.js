@@ -7,20 +7,11 @@ function App() {
       <div className="app-container">
         {
           movies.results.map((item) => {
-            const PosterUrl = `https://image.tmdb.org/t/p/w1280/${item.poster_path}`;
             return (
-              <div className='box'>
-                <img src = {PosterUrl} alt="ㄹ"></img>
-                <div className='text'>
-                  <p>{item.title}</p>
-                  <p>{item.vote_average}</p>
-                </div>
-              </div>
+              <Movie item={item} />
             )
           })
         }
-         {/* <div>{movies.dates.maximum}</div>
-         <div>{movies.results[0].id}</div> */}
       </div>
     </div>
   );
