@@ -1,4 +1,5 @@
 import Movie from './Components/Movie.jsx'
+import Detail from './Components/Detail.jsx'
 import {movies} from './movieDummy.js'
 
 function App() {
@@ -6,9 +7,13 @@ function App() {
     <div className="App">
       <div className="app-container">
         {
-          movies.results.map((item) => {
+          movies.results.map((item, index) => {
             return (
-              <Movie item={item} />
+              <div>
+                <Movie item={item} />
+                <Detail item={item} index={index} />
+              </div>
+
             )
           })
         }

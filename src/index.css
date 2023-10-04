@@ -1,24 +1,27 @@
 .app-container {
-  background-color: rgb(41, 40, 78);
+  background: rgb(41, 40, 78);
   display: flex;
   flex-wrap: wrap;
 }
 
 .box {
+  position: absolute;
   background-color: rgb(62, 62, 109);
   margin: 10px;
-  width: 180px;
-  height: 320px;
+  width: 200px;
+  height: 360px;
+  /* height: 800px; */
 
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  z-index: 800;
 }
 
 img {
-  width: 180px;
-  height: 300px;
+  width: 200px;
+  height: 360px;
 }
 
 .text {
@@ -32,4 +35,23 @@ img {
   display: flex;
   justify-content: space-around;
   text-align: center;
+}
+
+.overview {
+  position: relative;
+  margin: 10px;
+  width: 180px;
+  height: 360px;
+  padding: 0 10px;
+  
+  color: white;
+  font-size: 11px;
+  background-color: rgba(0,0,0,0.8);
+  opacity: 0;
+
+  display: flex;
+  justify-content: center;
+  text-align: flex-start;
+  flex-direction: column;
+  z-index: 900;
 }
