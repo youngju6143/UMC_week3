@@ -1,23 +1,22 @@
-import Movie from './Components/Movie.jsx'
-import Detail from './Components/Detail.jsx'
-import {movies} from './movieDummy.js'
+import { BrowserRouter, Route, Routes, Link, Router } from "react-router-dom";
+import Movies from './Pages/Movies'
+import TV from './Pages/TV'
+import Celebrity from './Pages/Celebrity'
+import Header from "./Components/Header";
+import Home from "./Pages/Home";
 
 function App() {
   return (
     <div className="App">
-      <div className="app-container">
-        {
-          movies.results.map((item, index) => {
-            return (
-              <div>
-                <Movie item={item} />
-                <Detail item={item} index={index} />
-              </div>
-
-            )
-          })
-        }
-      </div>
+      <BrowserRouter>
+          <Header />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/movie" element={<Movies />} />
+            <Route path="/tv" element={<TV />} />
+            <Route path="/person" element={<Celebrity />} />
+          </Routes>
+      </BrowserRouter>
     </div>
   );
 }
