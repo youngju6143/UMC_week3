@@ -12,5 +12,5 @@ export default function MovieDetail(props) {
             <img src={PosterUrl}></img>
             <p>{title}</p>
         </div>
-    )
+    ) 
 }
