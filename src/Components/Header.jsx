@@ -1,9 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import '../index.css'
+import LoginControl from './LoginControl'
 
 export default function Header() {
-    
+
   return (
     <div className='header'>
         <Link to='/'>
@@ -18,6 +18,7 @@ export default function Header() {
             <li><Link className='header_text' to="/tv"><p style={{color:"white"}}>TV 프로그램</p></Link></li>
             <li><Link className='header_text' to="/person"><p style={{color:"white"}}>인물</p></Link></li>
         </ul>
+        <LoginControl/>
     </div>
   )
 }

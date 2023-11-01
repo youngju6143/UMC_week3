@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
 const StyledBox = styled.div `
-  position: absolute;
+  // position: absolute;
   background-color: rgb(62, 62, 109);
   margin: 10px;
   width: 200px;
