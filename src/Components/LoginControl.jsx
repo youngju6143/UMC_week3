@@ -1,34 +1,29 @@
-import React, { Component } from 'react'
+import React, { Component, useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
-class LoginControl extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {isLoggedIn : true}
-        this.handleLoginClick = this.handleLoginClick.bind(this)
-        this.handleLogoutClick = this.handleLogoutClick.bind(this)
-    }
-    
-    handleLoginClick() {
-        this.setState({isLoggedIn : true})
-    }
+export default function LoginControl() {
+    let [isLoggedin, setIsLoggedin] = useState(true);
+    const navigate = useNavigate()
 
-    handleLogoutClick() {
-        this.setState({isLoggedIn : false})
-    }
-
-  render() {
       return (
         <div>
-            {this.state.isLoggedIn ? 
+            {isLoggedin ? 
                 (<div  style={{display:"flex"}}>
-                    <button className='loginControl_button' onClick={this.handleLogoutClick}>
+                    <button className='loginControl_button' 
+                    onClick={() => {
+                        setIsLoggedin(false)
+                        navigate('/login')}}>
                         로그인
                     </button>
                     <p className='loginControl_text'>로그인 해주세요!</p>
                 </div>)
                 :
                 (<div  style={{display:"flex"}}>
-                    <button className='loginControl_button' onClick={this.handleLoginClick}>
+                    <button className='loginControl_button'
+                     onClick={() => {
+                        setIsLoggedin(true)
+                        navigate('/')
+                        }}>
                         로그아웃
                     </button>
                     <p className='loginControl_text'>환영합니다!</p>
@@ -36,7 +31,4 @@ class LoginControl extends Component {
             }
         </div>
       )
-  }
 }
-
-export default LoginControl
