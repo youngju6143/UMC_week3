@@ -1,0 +1,140 @@
+.app-container {
+  background: rgb(41, 40, 78);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin : 0 -8px;
+}
+
+.box {
+  position: absolute;
+  background-color: rgb(62, 62, 109);
+  margin: 10px;
+  width: 200px;
+  height: 360px;
+  /* height: 800px; */
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 800;
+}
+
+img {
+  width: 200px;
+  height: 360px;
+}
+
+.text {
+  width: 180px;
+  height: 50px;
+  
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+}
+
+.overview {
+  position: relative;
+  margin: 10px;
+  width: 180px;
+  height: 360px;
+  padding: 0 10px;
+  
+  color: white;
+  font-size: 11px;
+  background-color: rgba(0,0,0,0.8);
+  opacity: 0;
+
+  display: flex;
+  justify-content: center;
+  text-align: flex-start;
+  flex-direction: column;
+  z-index: 900;
+}
+
+.header {
+  background-color: rgb(19, 28, 41);
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left : 100px;
+
+  margin : -8px -8px 0 -8px
+}
+
+.header_ul {
+  display: flex;
+  width: 200px;
+  justify-content: space-around;
+  padding-left: 20px
+}
+.header_text{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+li {
+  list-style: none;
+}
+
+.ad_banner {
+  width: 100vw;
+  height: 100%;
+  margin-left: -8px;
+}
+
+.loginControl_button {
+  width: 80px;
+  height: 25px;
+  border: none;
+  border-radius: 50px; 
+  margin-top: 12.5px;
+  margin-left: 10px;
+}
+
+.loginControl_text {
+  color: white;
+  margin-left: 10px;
+}
+
+.notFound_container {
+position: relative;
+top: 10vh;
+left : 10vw;
+}
+
+.text_content {
+  font-size: 20px;
+}
+
+.main_navigate {
+  font-size: 20px;
+  color: red;
+}
+
+/* login.jsx */
+
+.login_container {
+  display: flex;
+  justify-content: center;
+}
+.login_input {
+  width: 98%;
+  height: 40px;
+}
+.login_button {
+  width: 98%;
+  height: 40px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 20px;
+  color: white;
+  background-color: rgb(33, 46, 74);
+}

@@ -1,50 +1,70 @@
-# UMC_WEB
-5th UMC Web 6주차 및 8, 9주차 서버 자료
+# Getting Started with Create React App
 
-안녕하세용, 혹시 실행 과정 등에서 오류가 생긴다면 회장단 통해서 **섀넌/한상은(중앙 서버 파트장)** 에게 문의해주세요!
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-여러분들이 일단은 로컬 환경에서 구동해주시면 됩니다!
-그러기엔 Node.js를 설치하셔야 하는데 아래 따라만 해주시면 되니까 참고해주세용
+## Available Scripts
 
-## Node.js 설치
-[Node.js 설치 참고 블로그](https://offbyone.tistory.com/441)
+In the project directory, you can run:
 
-- git clone or 깃허브 파일 다운
-그리고 깃허브에서 다운받으시던, git clone을 진행하시던 해당 깃허브 파일을 받아주세요.
-아래 사진과 같이 다운받아주시면 됩니다 (node_modules는 없는 것이 맞아요!)
+### `npm start`
 
-  ![image](https://github.com/silvarge/UMC_WEB/assets/140832682/41cd5fb0-f8c9-45ad-9542-3ec642014929)
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-- 그리고 vscode 등의 터미널 혹은 cmd 창에서 아래 경로처럼 프로젝트 메인 실행 파일이 열려 있는 장소 (index.js)에 가있어야 합니다! 또한, 아래 사진처럼 디렉토리 파일 확인 시 index.js 파일이 있어야 합니다!!!
-  
-![image](https://github.com/silvarge/UMC_WEB/assets/140832682/53d4091b-b8dd-4324-96f7-02318680deea)
+The page will reload when you make changes.\
+You may also see any lint errors in the console.
 
-![image](https://github.com/silvarge/UMC_WEB/assets/140832682/1d2b2aad-d46a-4437-aae2-11eeafaa92ce)
+### `npm test`
 
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-- node_modules 설치 - 터미널 명령어 입력 - 아래 명령어 중 하나로 하면 됩니다! (yarn은 yarn을 따로 다운받아 줘야해요!)
-   - npm i
-   - npm install
-   - yarn install
-   
-- node.js 실행 - 터미널 명령어 입력 - 아래 명령어 중 하나로 하면 됩니다! (yarn은 yarn을 따로 다운받아 줘야해요!)
-   아래 사진처럼 실행되면 성공적으로 실행된 것입니다! (아래 접속 및 연결은 서버가 실행된 상태에서 진행해야 서버 사용이 가능합니다!)
-   - npm run start
-   - yarn start
+### `npm run build`
 
-  ![image](https://github.com/silvarge/UMC_WEB/assets/140832682/2272dd29-2422-4f64-8a18-44308a0913aa)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## 접속 방법
-```
-url: localhost:3000/user/login
-method: 'post',
-data: {
-  id: 'umcweb',
-  pw: '1234'
-}
-```
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-## API 확인하고자 할 때 (Swagger)
-브라우저에서 **localhost:3000/api-docs** 치기!
-어떻게 값을 넣으면 어떤 오류가 나오는지 등 확인할 수 있어용
-response 값 또한 확인하실 수 있습니다.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+
+If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+
+You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
+
+### Code Splitting
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+
+### Analyzing the Bundle Size
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+
+### Making a Progressive Web App
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+
+### Advanced Configuration
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+
+### Deployment
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+
+### `npm run build` fails to minify
+
+This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
