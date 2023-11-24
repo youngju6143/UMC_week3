@@ -7,25 +7,26 @@ import Home from "./Pages/Home";
 import MovieDetail from "./Pages/MovieDetail";
 import NotFound from "./Pages/NotFound";
 import Login from "./Components/Login";
+import { Provider } from "react-redux";
+import store from "./store";
 
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-          <Header />
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/movie" element={<Movies />} />
-            <Route path="/tv" element={<TV />} />
-            <Route path="/person" element={<Celebrity />} />
-            <Route path="/movie/:title" element={<MovieDetail />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/*" element={<NotFound />} />
-
-          </Routes>
-      </BrowserRouter>
-    </div>
+      <div className="App">
+          <BrowserRouter>
+              <Header />
+              <Routes>
+                <Route path="/" element={<Home />} />
+                <Route path="/movie" element={<Movies />} />
+                <Route path="/tv" element={<TV />} />
+                <Route path="/person" element={<Celebrity />} />
+                <Route path="/movie/:title" element={<MovieDetail />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/*" element={<NotFound />} />
+              </Routes>
+          </BrowserRouter>
+      </div>
   );
 }
 

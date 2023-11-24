@@ -20,6 +20,7 @@ function Movies() {
           headers: {
             accept: 'application/json',
             Authorization: `Bearer ${token}`
+            
           }
         })
         setMovies(res.data.results)
@@ -52,7 +53,7 @@ function Movies() {
          style={{ opacity: page !== 1 ? 1 : 0, pointerEvents: page !== 1 ? 'auto' : 'none' }}>이전</button>
         <p className='page_num'>{page}페이지</p>
         <button className='next_btn' onClick={nextPage}>다음</button>      
-      </div>ㅊ
+      </div>
     </div>
   );
 }

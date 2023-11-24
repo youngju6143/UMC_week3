@@ -1,20 +1,34 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { resolvePath, useNavigate } from 'react-router-dom'
 import axios from 'axios'
+import info from '../store'
+import {setId, setToken} from '../store'
+import { useDispatch, useSelector } from 'react-redux'
+
 
 export default function Login() {
     // const email = 'youngju6143@khu.ac.kr'
     // const password = '12345678'
     const email = 'umcweb'
     const password = '1234'
+    
 
     let [showAlert, setShowAlert] = useState(false)
     let [emailValid, setEmailValid] = useState(false)
     let [pwValid, setPwValid] = useState(false)
     
+    let info = useSelector((state) => state.info)
+
     const isButtonDisabled = emailValid && pwValid;
 
     const navigate = useNavigate()
+    const dispatch = useDispatch()
+
+    function saveLocalStorage(token, id) {
+      localStorage.setItem('token', token);
+      localStorage.setItem('id', id);
+    }
+  
     const fetchData = async () => {
         try {
           const endpoint = 'http://localhost:8000/user/login';
@@ -29,9 +43,15 @@ export default function Login() {
               'Content-Type': 'application/json', 
             },
           });
-    
+          let receivedToken = response.data.result.AccessToken
+          let receivedId = response.data.result.userId
+          
+          dispatch(setToken(receivedToken))
+          dispatch(setId(receivedId))
+
           // 응답 데이터 확인
-          console.log(response.data);
+          saveLocalStorage(receivedToken, receivedId);
+        
         } catch (error) {
           // 오류 처리
           console.log('Error during POST request:', error);
