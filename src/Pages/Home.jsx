@@ -10,7 +10,7 @@ export default function Home() {
   const fetchData = async () => {
     try {
       const endpoint = 'http://localhost:8000/user/payload';
-      let receivedToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVtY3dlYiIsInVzZXJuYW1lIjoiVU1DIOybuSDtjIzsnbTtjIUiLCJpYXQiOjE3MDA3NTE5MTksImV4cCI6MTcwMDc1MjgxOSwiaXNzIjoiVU1DIFdlYiBXQiJ9.bLHoofGDMp-AIQVO1k--_PjZyHdUb8EvXMy9VBQ92m8";
+      let receivedToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6InVtY3dlYiIsInVzZXJuYW1lIjoiVU1DIOybuSDtjIzsnbTtjIUiLCJpYXQiOjE3MDA4MTQxNzgsImV4cCI6MTcwMDgxNTA3OCwiaXNzIjoiVU1DIFdlYiBXQiJ9.ix7xTUBzJn5ZtfbZKNl7UbSIRKoJqIyPVMYgmstFHmw"
       // axios를 사용하여 GET 요청 보내기
       const response = await axios.get(endpoint, {
 
