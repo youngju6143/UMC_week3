@@ -18,7 +18,7 @@ export default function Home() {
         },
       });
             
-      // 응답 데이터 확인
+      // 응답 데이터 확인6
       console.log(response.data);
     } catch (error) {
       // 오류 처리

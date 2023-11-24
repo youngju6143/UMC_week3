@@ -17,6 +17,7 @@ export default function Header() {
             <li><Link className='header_text' to="/movie"><p style={{color:"white"}}>영화</p></Link></li>
             <li><Link className='header_text' to="/tv"><p style={{color:"white"}}>TV 프로그램</p></Link></li>
             <li><Link className='header_text' to="/person"><p style={{color:"white"}}>인물</p></Link></li>
+            <li><Link className='header_text' to="/movie2"><p style={{color:"white"}}>무한스크롤</p></Link></li>
         </ul>
         <LoginControl/>
     </div>

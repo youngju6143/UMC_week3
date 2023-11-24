@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes, Link, Router } from "react-router-dom";
 import Movies from './Pages/Movies'
+import Movies2 from './Pages/Movies2'
 import TV from './Pages/TV'
 import Celebrity from './Pages/Celebrity'
 import Header from "./Components/Header";
@@ -19,6 +20,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<Home />} />
                 <Route path="/movie" element={<Movies />} />
+                <Route path='/movie2' element={<Movies2/>} />
                 <Route path="/tv" element={<TV />} />
                 <Route path="/person" element={<Celebrity />} />
                 <Route path="/movie/:title" element={<MovieDetail />} />
