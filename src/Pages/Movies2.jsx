@@ -15,24 +15,25 @@ function Movies2() {
   const token = process.env.REACT_APP_TOKEN
 
 
-  const fetchData = async() => {
-    setLoading(true)
-      try {
-        const res = await axios.get(api, {
-          headers: {
-            accept: 'application/json',
-            Authorization: `Bearer ${token}`
-          }
-        })
-        setMovies((prevMovies) => [...prevMovies, ...res.data.results]); 
-      }
-      catch(error){
-        console.log(error)
-      } finally {
-        setLoading(false)
-      }
-  }
+  
   useEffect(() => {
+    const fetchData = async() => {
+      setLoading(true)
+        try {
+          const res = await axios.get(api, {
+            headers: {
+              accept: 'application/json',
+              Authorization: `Bearer ${token}`
+            }
+          })
+          setMovies((prevMovies) => [...prevMovies, ...res.data.results]); 
+        }
+        catch(error){
+          console.log(error)
+        } finally {
+          setLoading(false)
+        }
+    }
     fetchData()
   }, [page])
   

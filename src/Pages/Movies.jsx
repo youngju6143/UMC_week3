@@ -12,7 +12,9 @@ function Movies() {
   const prevPage=(() => {setPage(page-1)})
   const nextPage=(() => {setPage(page+1)})
 
-  const fetchData = async() => {
+  
+  useEffect(() => {
+    const fetchData = async() => {
       try {
         const res = await axios.get(api, {
           headers: {
@@ -28,7 +30,6 @@ function Movies() {
         console.log(error)
       }
   }
-  useEffect(() => {
     fetchData()
   }, [page])
   
