@@ -35,7 +35,7 @@ function Movie(props) {
     const PosterUrl = `https://image.tmdb.org/t/p/w1280/${props.item.poster_path}`;
     return (
       
-      <img src={PosterUrl} onClick={onClickImg} />
+      <img src={PosterUrl} alt = "." onClick={onClickImg} />
     );
   }
   

@@ -9,7 +9,7 @@ export default function MovieDetail(props) {
 
     return (
         <div>
-            <img src={PosterUrl}></img>
+            <img src={PosterUrl} alt = "."></img>
             <p>{title}</p>
         </div>
     ) 
