@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import Ad from '../Components/Ad'
 import axios from 'axios'
 import { useSelector } from 'react-redux';

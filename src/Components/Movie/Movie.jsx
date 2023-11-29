@@ -1,8 +1,5 @@
-import styled from "styled-components";
 import {StyledBox, StyledText} from './Movie.style'
 import { useNavigate } from 'react-router-dom';
-import axios from "axios";
-import { useEffect, useState } from "react";
 
 function Movie(props) {
     return (

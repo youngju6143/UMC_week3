@@ -1,5 +1,3 @@
-import Movie from '../Components/Movie/Movie'
-import Detail from '../Components/Detail.jsx'
 import {tvs} from '../tvDummy'
 import TVProgram from '../Components/TVProgram';
 

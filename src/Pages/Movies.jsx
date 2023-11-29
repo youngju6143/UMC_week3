@@ -1,7 +1,5 @@
 import Movie from '../Components/Movie/Movie'
-import Detail from '../Components/Detail.jsx'
 import { useEffect, useState } from 'react';
-import {movies} from '../movieDummy'
 import axios from 'axios';
 
 

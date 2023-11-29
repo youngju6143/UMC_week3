@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
-import { resolvePath, useNavigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import axios from 'axios'
-import info from '../store'
 import {setId, setToken} from '../store'
 import { useDispatch, useSelector } from 'react-redux'
 
@@ -17,8 +16,6 @@ export default function Login() {
     let [emailValid, setEmailValid] = useState(false)
     let [pwValid, setPwValid] = useState(false)
     
-    let info = useSelector((state) => state.info)
-
     const isButtonDisabled = emailValid && pwValid;
 
     const navigate = useNavigate()
@@ -84,7 +81,7 @@ export default function Login() {
                 type='password'
                 placeholder='영문, 숫자, 특수문자 포함 8자 이상'
                 onKeyUp={(e) => {
-                    if (e.target.value == password) 
+                    if (e.target.value === password) 
                         setPwValid(true)                   
                 }}></input>
             </div>

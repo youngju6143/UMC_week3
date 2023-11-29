@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Link, Router } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Movies from './Pages/Movies'
 import Movies2 from './Pages/Movies2'
 import TV from './Pages/TV'
@@ -8,8 +8,6 @@ import Home from "./Pages/Home";
 import MovieDetail from "./Pages/MovieDetail";
 import NotFound from "./Pages/NotFound";
 import Login from "./Components/Login";
-import { Provider } from "react-redux";
-import store from "./store";
 
 
 function App() {

@@ -1,7 +1,5 @@
 import Movie from '../Components/Movie/Movie.jsx'
-import Detail from '../Components/Detail.jsx'
 import { useEffect, useRef, useState } from 'react';
-import {movies} from '../movieDummy.js'
 import axios from 'axios';
 import {useInView} from 'react-intersection-observer'
 

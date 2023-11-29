@@ -1,4 +1,3 @@
-import {movies} from '../movieDummy.js'
 
 function Detail({item, index}) {
     return (

@@ -1,9 +1,7 @@
-import styled from "styled-components";
 import {StyledBox, StyledText} from './Movie/Movie.style'
 import { useNavigate } from 'react-router-dom';
 
 function TVProgram(props) {
-  const PosterUrl = `https://image.tmdb.org/t/p/w1280/${props.item.poster_path}`;
     return (
       <div>
         <StyledBox id='box'>
