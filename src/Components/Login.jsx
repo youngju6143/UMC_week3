@@ -5,13 +5,12 @@ import {setId, setToken} from '../store'
 import { useDispatch } from 'react-redux'
 
 
-export default function Login() {
+export default function Login(props) {
     // const email = 'youngju6143@khu.ac.kr'
     // const password = '12345678'
     const email = 'umcweb'
     const password = '1234'
     
-
     let [showAlert, setShowAlert] = useState(false)
     let [emailValid, setEmailValid] = useState(false)
     let [pwValid, setPwValid] = useState(false)
@@ -25,7 +24,7 @@ export default function Login() {
       localStorage.setItem('token', token);
       localStorage.setItem('id', id);
     }
-  
+
     const fetchData = async () => {
         try {
           const endpoint = 'http://localhost:8000/user/login';
@@ -54,6 +53,14 @@ export default function Login() {
           console.log('Error during POST request:', error);
         }
       };
+
+    const K_REST_API_KEY = process.env.REACT_APP_REST_API;
+    const K_REDIRECT_URI = "http://localhost:3000/oauth"
+    const kakaoURL = `https://kauth.kakao.com/oauth/authorize?client_id=${K_REST_API_KEY}&redirect_uri=${K_REDIRECT_URI}&response_type=code`;
+
+    const handleKakaoLogin = () => {
+      window.location.href = kakaoURL
+    }
 
   return (
     <div>
@@ -92,6 +99,7 @@ export default function Login() {
             onClick={() => {navigate('/')}}> 확인 </button>
             <button onClick={fetchData}>post 요청</button>
         </div> 
+          <button className='kakao_button' onClick={handleKakaoLogin}> </button>
     </div>
   )
 }

@@ -4,8 +4,8 @@ const initialState = {
     isSuccess: null,
     AccessToken: "",
     password: '1234',
-    userId: "umcweb"
-    
+    userId: "umcweb",
+    userName :''
   };
 
 const info = createSlice({
@@ -17,6 +17,9 @@ const info = createSlice({
         },
         setToken (state, action) {
             state.AccessToken = action.payload
+        },
+        setName(state, action) {
+            state.userName = action.payload
         }
     }
 })
@@ -26,6 +29,6 @@ export const store = configureStore({
         info: info.reducer
     }
 })
-export const {setId, setToken} = info.actions
+export const {setId, setToken, setName} = info.actions
 export default store;
 

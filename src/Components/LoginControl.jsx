@@ -1,17 +1,21 @@
 import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios'
+import { useSelector } from 'react-redux';
 
 export default function LoginControl() {
-    let [isLoggedin, setIsLoggedin] = useState(true);
+    // let [isLoggedin, setIsLoggedin] = useState(true);
     const navigate = useNavigate()
+
+    let userName = useSelector((state) => state.info.userName);
 
       return (
         <div>
-            {isLoggedin ? 
-                (<div  style={{display:"flex"}}>
+            {userName == '' ? 
+                (<div style={{display:"flex"}}>
                     <button className='loginControl_button' 
                     onClick={() => {
-                        setIsLoggedin(false)
+                        // setIsLoggedin(false)
                         navigate('/login')}}>
                         로그인
                     </button>
@@ -21,10 +25,9 @@ export default function LoginControl() {
                 (<div  style={{display:"flex"}}>
                     <button className='loginControl_button'
                      onClick={() => {
-                        setIsLoggedin(true)
                         navigate('/')
                         }}>
-                        로그아웃
+                        {userName}님
                     </button>
                     <p className='loginControl_text'>환영합니다!</p>
                 </div>)

@@ -196,3 +196,12 @@ left : 10vw;
 
   margin: 0 auto;
 }
+
+.kakao_button {
+  margin: 20px 10px 0 0 ;
+  display: block;
+  width: 367px;
+  height: 90px;
+  border: none;
+  background-image: url('../public/kakao_login_large_narrow.png');
+}
