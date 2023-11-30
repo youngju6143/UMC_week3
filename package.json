@@ -25,6 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
+  "honepage" : "https://umcwebstudyyoungju.netlify.app/",
   "eslintConfig": {
     "extends": [
       "react-app",
